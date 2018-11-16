@@ -1,6 +1,6 @@
 --dCore - Commissar Dinxy's Personal API
 --Version 1.0.1
---Last updated 2018-11-12
+--Last updated 2018-11-16
 
 --Clears screen and sets cursor position to 1, 1.
 
@@ -12,7 +12,7 @@ function clearScrn()
     term.setCursorPos(1, 1)
 end
 
---Exits program and clears screen.
+--Exits programm, clears screen and sets cursor position in 
 function cExit()
     print("Exiting...")
     sleep(1)
@@ -20,9 +20,13 @@ function cExit()
     error()
 end
 --Moves cursor position down by 1.
-function newLine()
+function newLine(lineCount)
     xPos, yPos = term.getCursorPos()
-    term.setCursorPos(1, (yPos + 1))
+    if type(line) ~= "number" or line < 1 then
+        term.setCursorPos(1, (yPos + lineCount))
+    else
+        term.setCursorPos(1, (yPos + 1))
+    end
 end
 --Scans each side for a peripheral and returns the side as string. If no side is found, returns "false". Modified version of function from willwac.
 function prFind(device)
