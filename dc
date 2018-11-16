@@ -18,7 +18,7 @@ end
 --Moves cursor position down by 1.
 function newLine(lineCount)
     xPos, yPos = term.getCursorPos()
-    if type(line) ~= "number" or line < 1 then
+    if type(lineCount) ~= "number" or line < 1 then
         term.setCursorPos(1, (yPos + lineCount))
     else
         term.setCursorPos(1, (yPos + 1))
