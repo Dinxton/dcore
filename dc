@@ -52,7 +52,8 @@ monitorprintcentred = function(text, side)
     monitor.setCursorPos(curx,cury+1) --return the cursor to the same position on the next line
 end
 
-function moveCursor(xPos, yPos)
+--Moves the cursor to a position relative to the current cursor position.
+function moveCursorRelative(xPos, yPos)
     OrigXPos, OrigYPos = term.getCursorPos()
     term.setCursorPos(OrigXPos + xPos, OrigYPos + yPos)
 end
