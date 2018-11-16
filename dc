@@ -1,12 +1,8 @@
 --dCore - Commissar Dinxy's Personal API
---Version 1.0.1
---Last updated 2018-11-16
+--Version 1.0.2
+--Last updated 2018-11-16 19:17
 
 --Clears screen and sets cursor position to 1, 1.
-
-
---TODO
---NewLine - allow user to set amount of new lines (use for loop?)
 function clearScrn()
     term.clear()
     term.setCursorPos(1, 1)
